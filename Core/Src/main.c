@@ -77,7 +77,7 @@ void thingspeak_ip_connection_and_get_field1_value(){
 	HAL_Delay(4000);
 	Uart_sendstring("AT+CIPSEND=72\r\n", &huart2);
 	while (!(Wait_for(">", &huart2)));
-	Uart_sendstring("GET /channels/2041908/fields/1.json?api_key=AIOO280F6CCC38AK&results=1\r\n", &huart2);
+	Uart_sendstring("GET /channels/2041908/fields/1.json?api_key=[YOUR-API-KEY]]results=1\r\n", &huart2);
 
 	while (!(Wait_for("+IPD", &huart2)));
 
